@@ -8,7 +8,8 @@ NOTE :
 - Using I18n language but for now just put english localization
 - Tested and worked perfectly on iOS
 - the style of HTML tag can be easily customized, example in this one i set the bold tag font weight value is 900, change the value go to Metrics configuration and change bold value
-- Any Question please contact michael.abadi@ti.ukdw.ac.id
+- Already using Redux and Sagas
+- Any Question or missing something please contact michael.abadi@ti.ukdw.ac.id
 
 
 ## :arrow_up: How to Setup
