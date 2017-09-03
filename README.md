@@ -1,7 +1,7 @@
 #  Inkitt
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-![GIF FILE ( DEMO OF THE APP )](https://media.giphy.com/media/3o7aDa4LGyUPu6qEs8/giphy.gif)
+![GIF FILE ( DEMO OF THE APP )](https://media.giphy.com/media/xT9IgulsRi84u8wX5u/giphy.gif)
 
 ## :arrow_up: How to Setup
 
