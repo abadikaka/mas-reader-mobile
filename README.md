@@ -1,7 +1,7 @@
 #  Inkitt
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+![](http://www.giphy.com/gifs/xT9IgNZF0b4Z2z3pmM)
 
 ## :arrow_up: How to Setup
 
@@ -59,4 +59,5 @@ Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
 ```
 
 The `.env` file is ignored by git keeping those secrets out of your repo.
+
 
