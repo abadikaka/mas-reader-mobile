@@ -10,7 +10,7 @@ NOTE :
 - the style of HTML tag can be easily customized, example in this one i set the bold tag font weight value is 900, change the value go to Metrics configuration and change bold value
 - Already using Redux and Sagas
 - Any Question or missing something please contact michael.abadi@ti.ukdw.ac.id
-
+- if run from react-native run iOS is fail please using Xcode directly sometimes that default react native command is not working...
 
 ## :arrow_up: How to Setup
 
