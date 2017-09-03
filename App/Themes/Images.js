@@ -19,7 +19,10 @@ const images = {
   chevronRight: require('../Images/Icons/chevron-right.png'),
   hamburger: require('../Images/Icons/hamburger.png'),
   backButton: require('../Images/Icons/back-button.png'),
-  closeButton: require('../Images/Icons/close-button.png')
+  closeButton: require('../Images/Icons/close-button.png'),
+  splashLogo: require('../Images/splash-logo.jpg'),
+  mainLogo: require('../Images/main-logo.jpg'),
+  inkittFamily: require('../Images/inkitt-family.jpg')
 }
 
 export default images

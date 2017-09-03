@@ -4,5 +4,8 @@ import '../I18n/I18n'
 
 export default {
   // font scaling override - RN default is on
-  allowTextFontScaling: true
+  allowTextFontScaling: true,
+  baseUrl: 'https://cap_america.inkitt.de/'
+  // ios setting
+  // android setting
 }

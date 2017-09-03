@@ -4,11 +4,16 @@ import rootSaga from '../Sagas/'
 
 export default () => {
   /* ------------- Assemble The Reducers ------------- */
-  const rootReducer = combineReducers({
+  const appReducer = combineReducers({
     nav: require('./NavigationRedux').reducer,
     github: require('./GithubRedux').reducer,
-    search: require('./SearchRedux').reducer
+    search: require('./SearchRedux').reducer,
+    inkittCore: require('./InkittCoreRedux').reducer
   })
+
+  const rootReducer = (state, action) => {
+    return appReducer(state, action)
+  }
 
   return configureStore(rootReducer, rootSaga)
 }
