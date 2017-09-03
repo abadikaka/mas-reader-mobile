@@ -1,7 +1,7 @@
 #  Inkitt
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-![](http://www.giphy.com/gifs/xT9IgNZF0b4Z2z3pmM)
+![Alt Text](http://www.giphy.com/gifs/xT9IgNZF0b4Z2z3pmM)
 
 ## :arrow_up: How to Setup
 
