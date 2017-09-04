@@ -1,4 +1,4 @@
-#  Inkitt
+#  HTML Reader Example
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 GIF : https://media.giphy.com/media/xT9IgulsRi84u8wX5u/giphy.gif
