@@ -2,14 +2,11 @@
  * Created by michaelabadi on 9/3/17.
  */
 import React from 'react'
-import { ScrollView, Text, Image, View, ActivityIndicator } from 'react-native'
+import { ScrollView } from 'react-native'
 import {connect} from 'react-redux'
-import {Metrics, Colors, Images} from '../Themes'
-import styles from './Styles/ChapterScreenStyle'
-
+import InkittHtmlView from '../Components/InkittHtmlView'
 import InkittCoreActions from '../Redux/InkittCoreRedux'
-import HTMLView from 'react-native-htmlview'
-import I18n from 'react-native-i18n'
+import CustomActivityIndicator from '../Components/CustomActivityIndicator'
 
 class ChapterScreen extends React.Component {
   constructor (props) {
@@ -23,7 +20,7 @@ class ChapterScreen extends React.Component {
     }
   }
 
-  componentWillMount () {
+  setupChapter () {
     if (!this.props.chapterPayload) {
       this.props.chapterRequest()
     } else {
@@ -36,7 +33,7 @@ class ChapterScreen extends React.Component {
     }
   }
 
-  componentWillReceiveProps (newProps) {
+  checkChapter (newProps) {
     if (newProps.chapterPayload) {
       this.setState({
         chapterName: newProps.chapterPayload.name,
@@ -47,38 +44,21 @@ class ChapterScreen extends React.Component {
     }
   }
 
-  renderWait = () => {
-    if (this.props.chapterFetching) {
-      return (
-        <View style={styles.indicatorView}>
-          <ActivityIndicator
-            animating
-            color={Colors.fire}
-            style={[{'transform': [{scale: 2}]}, {backgroundColor: Colors.transparent, marginTop: Metrics.doubleBaseMargin}]}
-            size='large'
-          />
-        </View>
-      )
-    } else {
-      return null
-    }
+  componentWillMount () {
+    // setup initial Chapter if Redux exist
+    this.setupChapter()
+  }
+
+  componentWillReceiveProps (newProps) {
+    // check new Chapter after request the chapter
+    this.checkChapter(newProps)
   }
 
   render () {
     return (
       <ScrollView bounces={false}>
-        <Image source={Images.inkittFamily} style={styles.avatarImg} resizeMode='cover' />
-        <Text style={styles.headerNameText}>
-          {this.state.chapterName + ',' + I18n.t('number') + ' : ' + this.state.chapterNumber}
-        </Text>
-        <HTMLView
-          value={this.state.chapterText}
-          stylesheet={styles}
-        />
-        <Text style={styles.wordCountText}>
-          {I18n.t('wordCount') + ' : ' + this.state.chapterWordCount}
-        </Text>
-        {this.renderWait()}
+        <InkittHtmlView chapterText={this.state.chapterText} chapterNumber={this.state.chapterNumber} chapterWordCount={this.state.chapterWordCount} chapterName={this.state.chapterName} />
+        <CustomActivityIndicator fetching={this.props.chapterFetching} />
       </ScrollView>
 
     )
