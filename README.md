@@ -3,6 +3,15 @@
 
 GIF : https://media.giphy.com/media/xT9IgulsRi84u8wX5u/giphy.gif
 
+NOTE :
+- App Config is on ../Config/AppConfig
+- Using I18n language but for now just put english localization
+- Tested and worked perfectly on iOS
+- the style of HTML tag can be easily customized, example in this one i set the bold tag font weight value is 900, change the value go to Metrics configuration and change bold value
+- Already using Redux and Sagas
+- Any Question or missing something please contact michael.abadi@ti.ukdw.ac.id
+- if run from react-native run iOS is fail please using Xcode directly sometimes that default react native command is not working...
+
 ## :arrow_up: How to Setup
 
 **Step 1:** git clone this repo:
