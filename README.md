@@ -2,6 +2,11 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
 GIF : https://media.giphy.com/media/xT9IgulsRi84u8wX5u/giphy.gif
+GIF-REMAKEVIEW : http://www.giphy.com/gifs/3o7aCV3RDXWqQn50vS
+
+FEATURE/REMAKEVIEW BRANCH :
+- Add WPM (Words Per Minute)
+- Make the HTML Tag View more beautiful ( Custom Fonts, Custom Size )
 
 NOTE :
 - App Config is on ../Config/AppConfig
