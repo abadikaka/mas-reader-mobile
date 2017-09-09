@@ -37,20 +37,40 @@ export default class InkittHtmlView extends Component {
     navigator: PropTypes.object
   }
 
+  calculateWpm () {
+    let wpm = this.props.chapterWordCount / 60
+    return Math.floor(wpm)
+  }
+
   render () {
     return (
       <View>
         <Image source={Images.inkittFamily} style={styles.avatarImg} resizeMode='cover' />
-        <Text style={styles.headerNameText}>
-          {this.props.chapterName + ',' + I18n.t('number') + ' : ' + this.props.chapterNumber}
-        </Text>
-        <HTMLView
-          value={this.props.chapterText}
-          stylesheet={styles}
-        />
-        <Text style={styles.wordCountText}>
-          {I18n.t('wordCount') + ' : ' + this.props.chapterWordCount}
-        </Text>
+        <View style={styles.textChapterView}>
+          <View style={styles.chapterNameView}>
+            <Text style={styles.headerNameText}>
+              {this.props.chapterName}
+            </Text>
+          </View>
+          <View style={styles.numberView}>
+            <Text style={styles.headerNameText}>
+              {this.props.chapterNumber}
+            </Text>
+          </View>
+        </View>
+        <View style={styles.htmlView}>
+          <HTMLView
+            value={this.props.chapterText}
+            stylesheet={styles}
+          />
+        </View>
+        {this.props.chapterName
+          ? <Text style={styles.wordCountText}>
+            {this.calculateWpm() + ' ' + I18n.t('minRead') + ' ( ' + this.props.chapterWordCount + I18n.t('word') + ' )'}
+          </Text>
+          : <View />
+        }
+
       </View>
     )
   }
