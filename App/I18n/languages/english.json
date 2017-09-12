@@ -25,5 +25,7 @@
    "search": "Search",
    "getStories": "Get Stories",
    "wordCount": "Word Count",
-   "number": "Number"
+   "word": "Words",
+   "number": "Number",
+   "minRead": "min read"
 }
